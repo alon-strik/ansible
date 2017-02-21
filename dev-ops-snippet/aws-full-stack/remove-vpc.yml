@@ -1,0 +1,48 @@
+- name: get selected security groups info
+  command: "aws ec2 describe-security-groups --filters Name=vpc-id,Values={{ vpc_id }} --query SecurityGroups[*]"
+  register: get_group_ids
+  changed_when: false
+
+- name: set sec group info
+  set_fact:
+    set_group_json: "{{ get_group_ids.stdout | from_json }}"
+  changed_when: false
+
+- name: remove security groups from VPC
+  local_action:
+    module: ec2_group
+    vpc_id: "{{ vpc_id }}"
+    region: "{{ region }}"
+    rules: []
+    description: "{{ item.Description }}"
+    name: "{{ item.GroupName }}"
+    state: absent
+  with_items:
+       - "{{set_group_json}}"
+
+- name: remove subnets and route tables from VPC
+  local_action:
+    module: ec2_vpc
+    vpc_id: "{{ vpc_id }}"
+    region: "{{ region }}"
+    state: absent
+    resource_tags: {env: "{{ env }}"}
+    subnets: []
+    internet_gateway: False
+    route_tables: []
+    wait: yes
+
+
+- name: delete VPC
+  local_action:
+    module: ec2_vpc
+    vpc_id: "{{ vpc_id }}"
+    region: "{{ region }}"
+    resource_tags: { Name: "{{ env}}-vpc", env: "{{ env }}" }
+    state: absent
+    wait: yes
+
+- name: remove key pair
+  ec2_key:
+    name: "{{ env }}_key.pem"
+    state: absent

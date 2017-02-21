@@ -1,0 +1,109 @@
+  - name: Create Web security group
+    ec2_group:
+      name: "{{ env }}-sg-web"
+      region: "{{ region }}"
+      description: allow web access from everywhere
+      vpc_id: "{{ vpc_id }}"
+      rules:
+        - proto: tcp
+          from_port: 80
+          to_port: 80
+          cidr_ip: 0.0.0.0/0
+    register: web_sec_group
+  - debug: var=web_sec_group verbosity=4
+
+
+  - name: Create Internal web security group
+    ec2_group:
+      name: "{{ env }}-vpc-web-internal"
+      region: "{{ region }}"
+      description: allow web access from internal network only
+      vpc_id: "{{ vpc_id }}"
+      rules:
+        - proto: tcp
+          from_port: 80
+          to_port: 80
+          cidr_ip: 10.0.0.0/24
+        - proto: tcp
+          from_port: 80
+          to_port: 80
+          cidr_ip: 10.0.1.0/24
+        - proto: tcp
+          from_port: 80
+          to_port: 80
+          cidr_ip: 10.0.2.0/24
+    register: web_internal_group
+  - debug: var=web_internal_group verbosity=4
+
+  - name: Create DB security group
+    ec2_group:
+      name: "{{ env }}-sg-db"
+      region: "{{ region }}"
+      description: allow access to db from web tier
+      vpc_id: "{{ vpc_id }}"
+      rules:
+        - proto: tcp
+          from_port: 3306
+          to_port: 3306
+          cidr_ip: 10.0.0.0/24
+        - proto: tcp
+          from_port: 3306
+          to_port: 3306
+          cidr_ip: 10.0.1.0/24
+        - proto: tcp
+          from_port: 3306
+          to_port: 3306
+          cidr_ip: 10.0.2.0/24
+    register: db_sec_group
+  - debug: var=db_sec_group verbosity=4
+
+
+  - name: Create SSH security group
+    ec2_group:
+      name: "{{ env }}-vpc-ssh"
+      region: "{{ region }}"
+      description: allow ssh access
+      vpc_id: "{{ vpc_id }}"
+      rules:
+        - proto: tcp
+          from_port: 22
+          to_port: 22
+          cidr_ip: "{{control_ip}}"
+    register: vpc_ssh_group
+  - debug: var=vpc_ssh_group verbosity=4
+
+  - name: Create outbound security group
+    ec2_group:
+      name: "{{ env }}-vpc-outbound"
+      description: allow outbound connections to the internet
+      region: "{{ region }}"
+      vpc_id: "{{ vpc_id }}"
+      rules_egress:
+       - proto: all
+         cidr_ip: 0.0.0.0/0
+    register: vpc_outbound_group
+  - debug: var=vpc_outbound_group verbosity=4
+
+  - name: get selected security groups info
+    command: "aws ec2 describe-security-groups --filters Name=vpc-id,Values={{ vpc_id }} --query SecurityGroups[*]"
+    register: list_sec_group
+    changed_when: false
+    ignore_errors: True
+
+  - name: set sec group info
+    set_fact:
+      set_group_json: "{{ list_sec_group.stdout | from_json }}"
+    changed_when: false
+
+  - block:
+    - name: "AWS | Provision networking | Tagging security Groups"
+      local_action:
+        module: ec2_tag
+        resource: "{{ item.GroupId}}"
+        region: "{{ region }}"
+        state: "present"
+        tags:
+           Name: "{{ env }}-{{ item.GroupName}}"
+           env: "{{ env }}"
+      with_items:
+         - "{{set_group_json}}"

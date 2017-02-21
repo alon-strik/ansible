@@ -1,0 +1,15 @@
+---
+- name: Remove VPC full stack infrastructure
+  hosts: localhost
+
+# env = -e "env=ansible"
+
+  vars_files:
+    - "{{ env }}_vars.yml"
+
+  tasks:
+
+  - include: vpc-lookup.yml
+
+  - include: remove-vpc.yml
+

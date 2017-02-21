@@ -1,0 +1,130 @@
+---
+- name: Bluehost backups
+  hosts: localhost
+  become: True
+  #become_method: sudo
+
+  # vars_files:
+  #   - vars.yml
+  vars:
+      remote_bk_dir: /home/alon/backup/
+      remote_ua_dir: /home/alon/tmp
+      remote_dest_dir: /home/alon/dest
+      source_folder: "/home/alon/LMSprojects/lms/nl-deploy"
+
+  tasks:
+
+    # - debug: msg="{{ item }}"
+    #   with_items:
+    #       - file
+    #       - source_folder/scripts/install-rating.sh
+    #       #  - /home/alon/LMSprojects/lms/nl-deploy/scripts/install-rating.sh
+    #       #  - /home/alon/LMSprojects/lms/nl-deploy/scripts/install.sh
+
+    - name: Create Backups folder
+      file: path={{ remote_bk_dir }} state=directory
+
+    - name: Create Backups Worker archive
+      command: tar cvf {{ remote_bk_dir }}worker.tar.gz {{ item }}
+      with_items:
+        - '{{source_folder}}/scripts/monitKeepAlive.sh'
+
+    - name: Add Backups Worker archive
+      command: tar rvf {{ remote_bk_dir }}worker.tar.gz {{ item }}
+      with_items:
+        - '{{source_folder}}/scripts/monitKeepAlive.sh'
+        - '{{source_folder}}/workers/app/updateWar.sh'
+        - '{{source_folder}}/scripts/utils.sh'
+        - '{{source_folder}}/scripts/setCluster.sh'
+        - '{{source_folder}}/workers/app/tomcat/conf/worker-messaging.properties'
+
+#    - name: Backups backend folder
+#      command: tar cvf {{ remote_bk_dir }}backend.tar.gz {{ item }}
+#      with_items:
+#        - '{{ source_folder }}/scripts/monitKeepAlive.sh'
+#        - '{{ source_folder }}/backend/app/updateWar.sh'
+#        - '{{ source_folder }}/scripts/utils.sh'
+#        - '{{ source_folder }}/scripts/setCluster.sh'
+#        - '{{ source_folder }}/backend/app/tomcat/conf/rest.clients.properties'
+#        - '{{ source_folder }}/backend/app/tomcat/conf/lms-messaging.properties'
+#
+#    - name: Backups identity folder
+#      command: tar cvf {{ remote_bk_dir }}identity.tar.gz {{ item }}
+#      with_items:
+#        - '{{ source_folder }}/scripts/monitKeepAlive.sh'
+#        - '{{ source_folder }}/identity/app/updateWar.sh'
+#        - '{{ source_folder }}/scripts/utils.sh'
+#
+#    - name: Backups Api-Gw folder
+#      command: tar cvf {{ remote_bk_dir }}apigw.tar.gz {{ item }}
+#      with_items:
+#        - '{{ source_folder }}/scripts/monitKeepAlive.sh'
+#        - '{{ source_folder }}/apiGw/app/updateWar.sh'
+#        - '{{ source_folder }}/scripts/utils.sh'
+#        - '{{ source_folder }}/scripts/fixAPiGwProxy.sh'
+#        - '{{ source_folder }}/scripts/fixIdentityProxy.sh'
+#        - '{{ source_folder }}/scripts/fixRatingProxy.sh'
+#        - '{{ source_folder }}/scripts/rebuildProxy.py'
+#        - '{{ source_folder }}/apiGw/app/tomcat/conf/rest.clients.properties'
+#
+#    - name: Backups MQ folder
+#      command: tar cvf {{ remote_bk_dir }}mq.tar.gz {{ item }}
+#      with_items:
+#         - '{{ source_folder }}/messageQueue/monitor/checkKafkaProcess.sh'
+#         - '{{ source_folder }}/messageQueue/monitor/startKafka.sh'
+#         - '{{ source_folder }}/scripts/utils.sh'
+#         - '{{ source_folder }}/scripts/monitorAutoScalingGroup.sh'
+#         - '{{ source_folder }}/scripts/attachEni.sh'
+#
+#    - name: Backups Zabbix folder
+#      command: tar cvf {{ remote_bk_dir }}zabbix.tar.gz {{ item }}
+#      with_items:
+#         - '{{ source_folder }}/zabbix/app/getTarFiles.sh'
+#         - '{{ source_folder }}/zabbix/config/'
+#         - '{{ source_folder }}/scripts/restartApache2.sh'
+#         - '{{ source_folder }}/scripts/utils.sh'
+#
+#    - name: Backups Sps folder
+#      command: tar cvf {{ remote_bk_dir }}sps.tar.gz {{ item }}
+#      with_items:
+#         - '{{ source_folder }}/spsSim/app/execApp.sh'
+#         - '{{ source_folder }}/spsSim/app/gettarFiles.sh'
+#         - '{{ source_folder }}/scripts/monitKeepAlive.sh'
+#         - '{{ source_folder }}/spsSim/app/spsUpgrade.sh'
+#         - '{{ source_folder }}/spsSim/app/startSPS.sh'
+#         - '{{ source_folder }}/spsSim/app/killSPS.sh'
+#         - '{{ source_folder }}/scripts/utils.sh'
+#
+#    - name: Backups Frontend folder
+#      command: tar cvf {{ remote_bk_dir }}frontend.tar.gz {{ item }}
+#      with_items:
+#         - '{{ source_folder }}/frontend/app/updateWar.sh'
+#         - '{{ source_folder }}/scripts/utils.sh'
+#
+#
+#    - name: Backups Rating folder
+#      command: tar cvf {{ remote_bk_dir }}rating.tar.gz {{ item }}
+#      with_items:
+#         - '{{ source_folder }}/rating/app/updateWar.sh'
+#         - '{{ source_folder }}/scripts/utils.sh'
+#         - '{{ source_folder }}/rating/app/tomcat/conf/rest.clients.properties'
+#         - '{{ source_folder }}/rating/app/tomcat/conf/rating.service.properties'
+#
+
+
+
+############
+
+    - name: Create Unarchive folder
+      file: path={{ remote_ua_dir }}/worker state=directory
+      register: worker_tmp_dir
+
+
+#    - name: Unarchive Rating folder
+#      command: tar xvf {{ remote_bk_dir }}worker.tar.gz --strip-components=4 -C {{ remote_ua_dir }}/worker
+
+#
+    - name: Unarchive Rating folder
+      unarchive:
+          src={{ remote_bk_dir }}worker.tar.gz
+          dest={{ remote_ua_dir }}/worker/

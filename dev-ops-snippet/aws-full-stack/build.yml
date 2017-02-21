@@ -1,0 +1,13 @@
+---
+- name: Create AWS infrastructure
+  hosts: localhost
+# env = -e "env=ansible"
+  vars_files:
+    - "{{ env }}_vars.yml"
+
+  tasks:
+  - include: vpc.yml
+  - include: securitygroup.yml
+  - include: AMI.yml
+  - include: ec2.yml
+#  - include: rds.yml

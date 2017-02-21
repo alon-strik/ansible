@@ -1,0 +1,15 @@
+---
+# Variables here are applicable to all host groups
+
+ec2_keypair: "cfn_access_key"
+ec2_security_group: "sg-ba797cdc"
+ec2_instance_type: "t2.small"
+ec2_image: "ami-366b3450"
+ec2_subnet_ids: ['subnet-5fedea29']
+ec2_region: "eu-west-1"
+ec2_tag_Name: "EC2 test"
+ec2_tag_Type: "server"
+ec2_tag_Environment: "test"
+ec2_volume_size: 16
+ec2_profile: "S3Download"
+ec2_monitor: yes

@@ -1,0 +1,50 @@
+---
+- hosts: localhost
+
+  vars:
+    dest_directory: "/home/alon/tmp/tmp1"
+    source_directory: "/home/alon/tmp"
+
+  tasks:
+    # - name: checking if the file x.sh exists
+    #   stat: path=/home/alon/x.sh
+    #   register: x
+
+    #
+    # - command: "ls {{ source_directory }}"
+    #   register: dir_out
+
+    # - debug: var={{ item }}
+    #   with_items: dir_out.stdout_lines
+  #- debug: msg="file is {{ item }}"
+
+  # #first ensure our target directory exists
+  #   - file: dest={{dest_directory}} state=directory
+  #
+#     - find: paths="/home/alon/tmp" patterns="*.properties" recurse=no  # patterns="inq.Linux*"
+    #   - shell: (cd /home/alon/tmp; find ./* -maxdepth 1 -type f | cut -d'/' -f2 )
+    #     register: file_to_copy
+    #
+    #  #- debug: msg={{ item }}
+    # #   with_items: "{{ file_to_copy.files }}"
+    #
+    #   - debug: msg={{ item }}
+    #     with_items: "{{ file_to_copy.stdout_lines }}"
+    #
+    #  #- debug: msg={{ file_to_copy.matched }}
+    #
+    # #  - fetch: src={{ item }} dest=/home/alon/tmp/tmp1
+    # #    with_items: files_to_copy.stdout_lines
+    #
+    #
+    #   - copy: src="{{source_directory}}/{{ item }}" dest="{{dest_directory}}" owner=alon mode=0775
+    #     with_items: "{{ file_to_copy.stdout_lines }}"
+    #
+
+      # - name: copy your folder using a work around
+      #   unarchive: src= dest=/destinationfolder
+      #   sudo: yes
+    #    - synchronize:  src="/opt/lms/tomcat/conf"  dest="/opt/lms/backup/"
+
+      - shell: (cd /home/alon/tmp; find ./* -maxdepth 1 -type f | cut -d'/' -f2 )
+        register: myhostname

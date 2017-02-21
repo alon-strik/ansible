@@ -1,0 +1,11 @@
+---
+
+# Deploy new EC2 image
+
+- hosts: localhost
+  connection: local
+  gather_facts: true
+  user: root
+
+  roles:
+   - provision-ec2

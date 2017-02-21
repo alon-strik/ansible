@@ -1,0 +1,21 @@
+---
+- hosts: local
+  
+  vars:
+    - web_file: alon2.conf
+ 
+  tasks:
+    - name: Install Apache2 
+      apt: name=apache2 state=latest
+
+    - name: enabled mod_rewrite
+      apache2_module: name=rewrite state=present
+      notify: RestartApache2
+
+    - name: create file
+      file: path=/var/www/html/{{ web_file }} state=touch mode="u=rw,g=r,o=r"
+      notify: file created
+
+  handlers:
+    - name: RestartApache2
+      service: name=apache2 state=restarted

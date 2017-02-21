@@ -1,0 +1,55 @@
+  - include: pre-requisites.yml
+
+  - name: Create the VPC
+    ec2_vpc:
+      region: "{{ region }}"
+      internet_gateway: True
+      resource_tags: { Name: "{{ env}}-vpc", env: "{{ env }}" }
+      cidr_block: 10.0.0.0/16
+      subnets:
+        - cidr: 10.0.0.0/24
+          az: "{{ zone_1 }}"
+          resource_tags: {env: "{{ env }}", tier: web, az: 1, Name: "{{env}}_sn_web_1" }
+        - cidr: 10.0.1.0/24
+          az: "{{ zone_2 }}"
+          resource_tags: {env: "{{ env }}", tier: web, az: 2, Name: "{{env}}_sn_web_2" }
+        - cidr: 10.0.2.0/24
+          az: "{{ zone_3 }}"
+          resource_tags: {env: "{{ env }}", tier: web, az: 3, Name: "{{env}}_sn_web_3" }
+        - cidr: 10.0.5.0/24
+          az: "{{ zone_1 }}"
+          resource_tags: {env: "{{ env }}", tier: db, az: 1, Name: "{{env}}_sn_db_1" }
+        - cidr: 10.0.6.0/24
+          az: "{{ zone_2 }}"
+          resource_tags: {env: "{{ env }}", tier: db, az: 2, Name: "{{env}}_sn_db_2" }
+        - cidr: 10.0.7.0/24
+          az: "{{ zone_3 }}"
+          resource_tags: {env: "{{ env }}", tier: db, az: 3, Name: "{{env}}_sn_db_3" }
+      route_tables:
+        - subnets:
+          - 10.0.0.0/24
+          - 10.0.1.0/24
+          - 10.0.2.0/24
+          routes:
+            - dest: 0.0.0.0/0
+              gw: igw
+    register: vpc
+
+  - set_fact: vpc_id="{{ vpc.vpc_id }}"
+  - set_fact: web_tier_subnet_1="{{ vpc.subnets[0].id}}"
+  - set_fact: web_tier_subnet_2="{{ vpc.subnets[1].id}}"
+  - set_fact: web_tier_subnet_3="{{ vpc.subnets[2].id}}"
+  - set_fact: db_tier_subnet_1="{{ vpc.subnets[2].id}}"
+  - set_fact: db_tier_subnet_2="{{ vpc.subnets[3].id}}"
+  - set_fact: db_tier_subnet_3="{{ vpc.subnets[4].id}}"
+
+  - name: Create key pair
+    ec2_key: name="{{ env }}_key" region="{{ region }}"
+    register: keypair
+
+  - name: Write the key to a file
+    copy:
+      dest: "keys/{{ env }}_key.pem"
+      content: "{{ keypair.key.private_key }}"
+      mode: 0600
+    when: keypair.changed

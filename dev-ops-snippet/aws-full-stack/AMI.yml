@@ -1,0 +1,13 @@
+#  - name: Get the ubuntu trusty AMI
+#    ec2_ami_search: distro=ubuntu release=trusty virt=hvm region={{ region }}
+#    register: ubuntu_image
+
+#  - name: Get the My image
+#    ec2_ami_find:
+#      owner: self
+#      region: "{{ region }}"
+#      ami_id: "ami-366b3450"
+##      ami_tags:
+##        deploy: basic
+#      no_result_action: fail
+#    register: ubuntu_image

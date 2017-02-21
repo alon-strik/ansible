@@ -1,0 +1,6 @@
+    remote_bk_dir: /home/alon/backup/
+    local_bk_dir: /home/alon/backup/
+
+    folders:
+        - /home/alon/LMSprojects/lms/nl-deploy/scripts
+        - /home/alon/LMSprojects/lms/nl-deploy/ansible/playbooks

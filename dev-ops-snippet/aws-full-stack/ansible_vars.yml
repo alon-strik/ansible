@@ -1,0 +1,21 @@
+---
+control_ip: 175.45.102.163/32
+
+region: eu-west-1
+zone_1: eu-west-1a
+zone_2: eu-west-1b
+zone_3: eu-west-1c
+
+server:
+  instance_type: t2.micro
+  zone_1_count: 1
+  zone_2_count: 1
+  zone_3_count: 1
+  instance_image: ami-366b3450
+
+db:
+  instance_type: db.t2.micro
+  size: 5
+  name: rockbands
+  user: rockbands
+  password: password123

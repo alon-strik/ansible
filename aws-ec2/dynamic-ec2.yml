@@ -1,0 +1,14 @@
+---
+- name: Dynamic Servers
+  hosts: tag_vpcid_vpc-5faa933b
+  #hosts: localhost
+  user: ubuntu
+  become: yes
+  become_method: sudo
+  gather_facts: true
+
+  tasks:
+    - name: Display all variables/facts known for a host
+      debug:
+        var: hostvars[inventory_hostname]
+        verbosity: 4

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ansible-aws-roles" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cwoaws-core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kafka/ansible_kafka_tarball" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../dev-ops-snippet" vcs="Git" />
+  </component>
+</project>

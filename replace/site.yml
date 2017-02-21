@@ -1,0 +1,61 @@
+---
+- hosts: localhost
+  become: yes
+  become_method: sudo
+
+  tasks:
+  - block:
+      - debug: msg='i execute normally'
+      - stat: path=/home/alon/1.txt
+        register: 1txt
+      # - stat: path=/home/alon/2.txt
+      #   register: 2txt
+      - name: Modify file 1
+        lineinfile: dest=/home/alon/1.txt
+                  backup=yes
+                  regexp="password="
+                  line=password=aaaaaa
+                  state=present
+        #when: 1txt.stat.exists == True
+#      - debug: msg='i never execute, cause ERROR!'
+    rescue:
+      - debug: msg='I caught an error'
+      - debug: msg='I also never execute :-('
+    # always:
+    #   - debug: msg="this always executes"
+  # vars:
+  #   new_password:  123456
+  #
+  # tasks:
+  #   - stat: path=/home/ubuntu/1.txt
+  #     register: 1txt
+  #   - stat: path=/home/ubuntu/2.txt
+  #     register: 2txt
+  #
+  #   - block:
+  #         - name: Modify file 1
+  #           lineinfile: dest=/home/ubuntu/1.txt
+  #                       regexp='password='
+  #                       line=password=123456
+  #                       state=present
+  #           when: 1txt.stat.exists == True
+  #
+  #         - name: Modify file 2
+  #           lineinfile: dest=/home/ubuntu/2.txt
+  #                       regexp='name='
+  #                       line=name=123456
+  #                       state=present
+  #           when: 2txt.stat.exists == True
+  #     rescu:
+  #       - debug: msg='I caught an error'
+  #       - command: /bin/false
+  #       - debug: msg='I also never execute :-('
+
+
+    #   uri:
+    #     url: http://localhost:8080/lms/v1/system/status
+    #     return_content: yes
+    #     register: resp
+    # - debug: msg={{ resp.json['status'] }}
+    # - debug: msg="APIGW Get status successful"
+    #   when: resp.json['status'] == "OK"

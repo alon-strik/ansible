@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bae4eb36-8671-404e-ad5f-cd368c71db94" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Documents/Ansible Up and Running.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Documents/AnsibleTowerUserGuide.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Documents/ansible-for-devops-sample.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Documents/intro-ansible.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Documents/workshop-ansible.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.directory" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ansible.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/REST/site.retry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/REST/site.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache2-playbook.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archive/site.retry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archive/site.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archive/vars.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archive/vars.yml.save" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/delete-ec2.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/dynamic-ec2.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/files/ec2_user_data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/files/ec2_vars.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/group_vars/all" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/inventory/ec2.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/inventory/ec2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/inventory/hosts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/provision-ec2.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/roles/delete-ec2/tasks/main.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-ec2/roles/provision-ec2/tasks/main.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compareFiles.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/AMI.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/ansible.cfg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/ansible_vars.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/build.retry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/build.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/content" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/deploy.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/ec2.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/elb.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/files/index.j2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/files/info.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/files/setup_db.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/inventory/ec2.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/inventory/ec2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/pre-requisites.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/rds.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/remove-infra.retry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/remove-infra.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/remove-vpc.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/securitygroup.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/setup.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/vpc-lookup.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/vpc.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/x.facts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/mysql-db/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/mysql-db/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/mysql-db/VagrantFile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/mysql-db/bootstrap.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/simple-web-server-nginx/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/simple-web-server-nginx/Vagrantfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/simple-web-server-nginx/bootstrap.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/simple-web-server-nginx/nginx_conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev-ops-snippet/simple-web-server-nginx/www/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dockers/roles/docker/tasks/main.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dockers/site.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dockers/suspicious.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/basic-create.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/basic-delete.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/cfn_access_key.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/create-resources.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/files/ec2_user_data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/files/ec2_vars.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/group_vars/all" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/hosts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/plugins/inventory/ec2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/provision-ec2.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/provision.retry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/provision.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2-instance-test/roles/provision-ec2/tasks/main.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ec2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/envset.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/file1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/file2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fixAnsible" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/items-playbook.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readFiles/site.retry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readFiles/site.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/replace/site.retry" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/replace/site.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/replace/test.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/ec2.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/ec2.py" />
+    </list>
+    <ignored path="ansible.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ansible" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ec2-instance/files/ec2_user_data" />
+        <option value="$PROJECT_DIR$/archive/site.yml" />
+        <option value="$PROJECT_DIR$/compareFiles.py" />
+        <option value="$PROJECT_DIR$/switchTest.py" />
+        <option value="$PROJECT_DIR$/ec2-instance/basic-delete.yml" />
+        <option value="$PROJECT_DIR$/ec2-instance/create-resources.yml" />
+        <option value="$PROJECT_DIR$/ec2-instance/files/ec2_vars.yml" />
+        <option value="$PROJECT_DIR$/ec2-instance/group_vars/all" />
+        <option value="$PROJECT_DIR$/ec2-instance/roles/provision-ec2/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/ec2-instance/provision-ec2.yml" />
+        <option value="$PROJECT_DIR$/ec2-instance/provision.yml" />
+        <option value="$PROJECT_DIR$/ec2-instance/basic-create.yml" />
+        <option value="$PROJECT_DIR$/aws-ec2/group_vars/all" />
+        <option value="$PROJECT_DIR$/aws-ec2/provision-ec2.yml" />
+        <option value="$PROJECT_DIR$/aws-ec2/delete-ec2.yml" />
+        <option value="$PROJECT_DIR$/aws-ec2/roles/delete-ec2/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/aws-ec2/roles/provision-ec2/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/setup.sh" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/AMI.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/elb.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/example_vars.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/ec2.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/rds.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/vpc-lookup.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/vpc.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/pre-requisites.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/remove-infra.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/securitygroup.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/remove-vpc.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/build.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/deploy.yml" />
+        <option value="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/inventory/ec2.ini" />
+        <option value="$PROJECT_DIR$/aws-ec2/dynamic-ec2.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="43" />
+    <option name="y" value="24" />
+    <option name="width" value="1877" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyCompatibilityInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/aws-ec2" />
+      <recent name="$PROJECT_DIR$/dev-ops-snippet/aws-full-stack" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/aws-ec2/roles" />
+      <recent name="$PROJECT_DIR$/ec2-instance" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.compareFiles">
+    <configuration default="false" name="compareFiles" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ansible" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compareFiles.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ansible" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ansible" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ansible" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ansible" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ansible" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ansible" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ansible" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.compareFiles" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.compareFiles" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bae4eb36-8671-404e-ad5f-cd368c71db94" name="Default" comment="" />
+      <created>1484987079292</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1484987079292</updated>
+    </task>
+    <task id="LOCAL-00001" summary="--">
+      <created>1487159734936</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1487159734937</updated>
+    </task>
+    <task id="LOCAL-00002" summary="--">
+      <created>1487161156219</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1487161156219</updated>
+    </task>
+    <task id="LOCAL-00003" summary="--">
+      <created>1487165971363</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1487165971363</updated>
+    </task>
+    <task id="LOCAL-00004" summary="--">
+      <created>1487165985689</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1487165985689</updated>
+    </task>
+    <task id="LOCAL-00005" summary="--">
+      <created>1487168534262</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1487168534262</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add full stack deployment">
+      <created>1487172143064</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1487172143064</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add full stack deployment">
+      <created>1487511529859</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1487511529859</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="43" y="24" width="1877" height="1056" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17980562" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7795359" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="--" />
+    <MESSAGE value="add full stack deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="add full stack deployment" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/hosts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/files/ec2_user_data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dockers/site.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dockers/suspicious.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dockers/roles/docker/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/site.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="127" column="15" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compareFiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="105" column="10" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/switchTest.py" />
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/files/ec2_vars.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/create-resources.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/provision.retry">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/group_vars/all">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/roles/provision-ec2/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws-ec2/files/ec2_user_data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws-ec2/files/ec2_vars.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/provision-ec2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws-ec2/group_vars/all">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/basic-create.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/provision.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="47" column="0" selection-start-line="43" selection-start-column="2" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2-instance-test/basic-delete.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws-ec2/delete-ec2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="81" selection-start-line="5" selection-start-column="3" selection-end-line="6" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws-ec2/roles/delete-ec2/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws-ec2/roles/provision-ec2/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="79" selection-start-line="28" selection-start-column="2" selection-end-line="29" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/.idea/misc.xml" />
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/simple-web-server-nginx/bootstrap.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ec2.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="180" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/ansible.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/build.retry">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/elb.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/ec2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/AMI.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/rds.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/pre-requisites.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/remove-infra.retry">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/securitygroup.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/remove-vpc.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/remove-infra.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/ansible_vars.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/files/setup_db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/vpc-lookup.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/files/index.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/inventory/ec2.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="136" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/inventory/ec2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="45" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="1237" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/build.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws-ec2/provision-ec2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws-ec2/inventory/ec2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/vpc.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="10" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="843">
+          <caret line="93" column="2" selection-start-line="93" selection-start-column="2" selection-end-line="93" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aws-ec2/dynamic-ec2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev-ops-snippet/aws-full-stack/deploy.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

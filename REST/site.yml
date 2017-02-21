@@ -1,0 +1,47 @@
+---
+- hosts: localhost
+  become: yes
+  become_method: sudo
+
+  vars:
+    HOST_URL: 52.210.188.96
+
+#     - uri:
+#            url: https://52.30.59.65/api-gw/v1/system/status
+#            return_content: yes
+#            register: json_response
+#            validate_certs: False
+
+#     - debug: msg=json_response| from_json
+#       when: json_response["OK"] is not defined
+
+  tasks:
+# GET
+    # - name: Get JSON from API lms
+    #   uri: url="http://localhost:8080/lms/v1/system/status" return_content=yes
+    #   register: resp
+    # - debug: msg={{ resp.json['status'] }}
+    # - debug: msg="Success"
+    #   when: resp.json['status'] == "OK"
+# POST
+    # - name: login
+    #   uri:
+    #     url: http://0.0.0.0:15672/api/permissions/{{ rabbit_virtualhost }}/{{ rabbit_username }}
+    #     method: PUT
+    #     user: "{{ rabbit_username }}"
+    #     password: "{{ rabbit_password }}"
+    #     return_content: yes
+    #     body: {"configure":".*","write":".*","read":".*"}
+    #     body_format: json
+    #     status_code: 204
+
+
+    - name: POST a Body to an Endpoint
+      win_uri:
+        url: https://{{ HOST_URL }}/auth/v1/identity/tokens
+        method: POST
+        body: "{ 'user_name': 'admin', 'password': 'Admin11!' }"
+
+    #    register: resp
+
+    #- debug: msg={{ body }}

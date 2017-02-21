@@ -1,0 +1,3 @@
+sudo dpkg -r ansible
+sudo apt-get autoremove
+sudo pip install ansible

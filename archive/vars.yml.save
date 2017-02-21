@@ -1,0 +1,12 @@
+    remote_bk_dir: /home/alon/LMSprojects/lms/nl-deploy/scripts/
+    local_bk_dir: /home/alon/backup/
+    # db_host: yourDbHost
+    # db_user: yourBluehostUsername
+    # db_pass: yourBluehostPassword
+    # databases:
+    #    - yourBluehostUsername_db1
+    #    - yourBluehostUsername_db2
+   folders:
+      - /home/alon/LMSprojects/lms/nl-deploy/scripts
+    # your_name: yourName
+    # your_email: yourEmail
